@@ -274,9 +274,11 @@ module.exports = class frostybot_exchange_binance_futures extends frostybot_exch
 
         // Add Binance Broker ID if configured
 
-        var brokerid = await this.mod.config.get('core:binancebrokerid', false);
-        if (![undefined, false].includes(brokerid)) {
-            order.params['newClientOrderId'] = 'x-' + brokerid.toUpperCase();
+        if (['long', 'short', 'buy', 'sell', 'close'].includes(type)) {
+            var brokerid = await this.mod.config.get('core:binancebrokerid', false);
+            if (![undefined, false].includes(brokerid)) {
+                order.params['newClientOrderId'] = 'x-' + brokerid.toUpperCase();
+            }
         }
 
         // Check account to see if hedge mode is enabled
