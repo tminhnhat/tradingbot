@@ -61,7 +61,7 @@ const BINANCE_ERROR_CODES = {
     '-2015': 'REJECTED_MBX_KEY',
     '-2016': 'NO_TRADING_WINDOW',
     '-2018': 'BALANCE_NOT_SUFFICIENT',
-    '-2019': 'MARGIN_NOT_SUFFICIEN',
+    '-2019': 'MARGIN_NOT_SUFFICIENT',
     '-2020': 'UNABLE_TO_FILL',
     '-2021': 'ORDER_WOULD_IMMEDIATELY_TRIGGER',
     '-2022': 'REDUCE_ONLY_REJECT',
@@ -731,7 +731,7 @@ module.exports = class frostybot_exchange_binance_futures extends frostybot_exch
         if (['all', undefined].includes(id)) {
             var orders = await this.open_orders({symbol: symbol});
             if (params.direction != undefined) {
-                orders = orders.filter(order => order.direction == direction);
+                orders = orders.filter(order => order.direction == params.direction);
                 var error = false;
                 orders.forEach(async (order, idx) => {
                     var id = order.id;
