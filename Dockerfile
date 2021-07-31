@@ -4,7 +4,7 @@ ENV SSH_PASS="frostybot123"
 ENV SSH_PORT=22
 ENV FROSTYBOT_PORT=80
 RUN apt-get update -y && apt-get install -y sudo jq wget sqlite3 git openssh-server
-RUN mkdir -p /usr/local/frostybot-js && cd /usr/local
+RUN mkdir -p /usr/local/frostybot-js && cd /usr/local/frostybot-js
 WORKDIR /usr/local/frostybot-js
 COPY package*.json ./
 RUN npm install
