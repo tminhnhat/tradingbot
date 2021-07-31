@@ -2,9 +2,9 @@ FROM node:12
 ENV SSH_USER="frostybot"
 ENV SSH_PASS="frostybot123"
 ENV SSH_PORT=22
-ENV FROSTYBOT_PORT=8888
+ENV FROSTYBOT_PORT=80
 RUN apt-get update -y && apt-get install -y sudo jq wget sqlite3 git openssh-server
-RUN mkdir -p /usr/local && cd /usr/local && git clone https://github.com/CryptoMF/frostybot-js.git frostybot-js
+RUN mkdir -p /usr/local && cd /usr/local && git clone https://github.com/tminhnhat/tradingbot.git frostybot-js
 WORKDIR /usr/local/frostybot-js
 COPY package*.json ./
 RUN npm install
