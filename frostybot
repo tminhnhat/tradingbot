@@ -12,7 +12,7 @@ else
 fi
 
 
-URL="http://127.0.0.1:$PORT/frostybot"
+URL="http://0.0.0.0:$PORT/frostybot"
 
 for x in "autostart" "start" "stop" "status" "debug" "upgrade" "test" "log" "branch" "dbupgrade"; do
     if [ "$1" == "$x" ]; then
