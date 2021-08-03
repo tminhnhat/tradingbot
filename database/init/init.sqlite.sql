@@ -18,7 +18,6 @@ REPLACE INTO "settings" ("mainkey", "subkey", "value") VALUES
 	('whitelist', '34.212.75.30', '{"ip":"34.212.75.30","description":"TradingView Server Address","canDelete":0}'),
 	('whitelist', '52.89.214.238', '{"ip":"52.89.214.238","description":"TradingView Server Address","canDelete":0}'),
 	('whitelist', '127.0.0.1', '{"ip":"127.0.0.1","description":"localhost","canDelete":0}'),
-	('whitelist', '172.17.0.3', '{"ip":"172.17.0.3","description":"docker","canDelete":0}'),
 	('whitelist', '::1', '{"ip":"::1","description":"localhost","canDelete":0}');
 
 -- Version 0
