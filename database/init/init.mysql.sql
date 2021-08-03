@@ -71,6 +71,7 @@ REPLACE INTO `settings` (`uuid`, `mainkey`, `subkey`, `value`) VALUES ('00000000
 REPLACE INTO `settings` (`uuid`, `mainkey`, `subkey`, `value`) VALUES ('00000000-0000-0000-0000-000000000000','whitelist','34.212.75.30','{\"canDelete\": 0, \"ip\": \"34.212.75.30\", \"description\": \"TradingView Server Address\"}');
 REPLACE INTO `settings` (`uuid`, `mainkey`, `subkey`, `value`) VALUES ('00000000-0000-0000-0000-000000000000','whitelist','52.89.214.238','{\"canDelete\": 0, \"ip\": \"52.89.214.238\", \"description\": \"TradingView Server Address\"}');
 REPLACE INTO `settings` (`uuid`, `mainkey`, `subkey`, `value`) VALUES ('00000000-0000-0000-0000-000000000000','whitelist','127.0.0.1','{\"canDelete\": 0, \"ip\": \"127.0.0.1\", \"description\": \"localhost\"}');
+REPLACE INTO `settings` (`uuid`, `mainkey`, `subkey`, `value`) VALUES ('00000000-0000-0000-0000-000000000000','whitelist','172.17.0.0','{\"canDelete\": 0, \"ip\": \"172.17.0.0\", \"description\": \"docker\"}');
 REPLACE INTO `settings` (`uuid`, `mainkey`, `subkey`, `value`) VALUES ('00000000-0000-0000-0000-000000000000','whitelist','::1','{\"canDelete\": 0, \"ip\": \"::1\", \"description\": \"localhost\"}');
 
 --
