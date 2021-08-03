@@ -30,6 +30,9 @@ module.exports = class frostybot_whitelist_module extends frostybot_module {
         data.ip = '127.0.0.1'
         data.description = 'localhost'
         this.settings.set('whitelist', data.ip, data)
+        data.ip = '172.17.0.0'
+        data.description = 'docker'
+        this.settings.set('whitelist', data.ip, data)
     }
     
 
