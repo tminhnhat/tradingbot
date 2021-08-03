@@ -36,5 +36,26 @@ echo "You can start the server using this command:   frostybot start"
 echo "You can stop the server using this command:    frostybot stop"
 echo "You can upgrade the server using this command: frostybot upgrade"
 echo ""
+echo "bat dau cai docker"
+cd ~
+mkdir nodered
+sudo apt-get install \
+    apt-transport-https \
+    ca-certificates \
+    curl \
+    gnupg \
+    lsb-release
+curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo gpg --dearmor -o /usr/share/keyrings/docker-archive-keyring.gpg
+echo \
+  "deb [arch=amd64 signed-by=/usr/share/keyrings/docker-archive-keyring.gpg] https://download.docker.com/linux/ubuntu \
+  $(lsb_release -cs) stable" | sudo tee /etc/apt/sources.list.d/docker.list > /dev/null
+sudo apt-get update
+sudo apt-get install docker-ce docker-ce-cli containerd.io
 
 
+echo "bat dau cai potiner"
+docker volume create portainer_data
+docker run -d -p 8000:8000 -p 9000:9000 --name=portainer --restart=always -v /var/run/docker.sock:/var/run/docker.sock -v portainer_data:/data portainer/portainer-ce
+
+echo "bat dau cai nodered"
+docker run -it -p 80:1880 -v /home/ubuntu/nodered:/data --name mynodered nodered/node-red:latest
