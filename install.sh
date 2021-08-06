@@ -56,6 +56,5 @@ sudo apt-get install -y docker-ce docker-ce-cli containerd.io
 echo "bat dau cai potiner"
 sudo docker volume create portainer_data
 sudo docker run -d -p 8000:8000 -p 9000:9000 --name=portainer --restart=always -v /var/run/docker.sock:/var/run/docker.sock -v portainer_data:/data portainer/portainer-ce
-
-echo "bat dau cai nodered"
-sudo docker run -it -p 80:1880 -v /home/ubuntu/nodered:/data --name mynodered nodered/node-red:latest
+echo "set time cho vps"
+sudo timedatectl set-timezone Asia/Ho_Chi_Minh
