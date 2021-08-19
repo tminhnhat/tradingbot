@@ -29,7 +29,7 @@ frostybot start
 frostybot autostart
 
 cd "$CURRENTPATH" &
-frostybot gui:enable email=nhatco@gmail.com password=tiendien
+frostybot gui:enable email=nhatco@gmail.com password=.........
 echo "Frostybot install completed!"
 echo ""
 echo "You can start the server using this command:   frostybot start"
